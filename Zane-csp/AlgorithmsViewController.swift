@@ -23,12 +23,12 @@ public class AlgorithmsViewController: UIViewController
         let stepTwo :String = "Create all classes"
         let stepThree :String = "imports/variables"
         let stepFour :String = "write the code"
-        let stepFive :Sring = "test the code"
+        let stepFive :String = "test the code"
         
         // TODO: Finish adding all steps to the algorithm
         algorithmSteps = [stepOne, stepTwo, stepThree]
         
-        let attributesDictionary = [NSAttributeedStringKey.fot : algrithmText.font]
+        let attributesDictionary = [NSAttributeedStringKey.fot : algorithmText.font]
         let fullAttrbutedString = NSMutableAttributedString(string: algorithm, attributes: attributesDictionary)
         
         for step in algorithmSteps
@@ -38,7 +38,7 @@ public class AlgorithmsViewController: UIViewController
             let attributdStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
             let paragraphStyle = createParagraphStyle()
             
-            attributedStringStep.addAttributes([NSAtributedStringKey.paragraphStyle : paragraphStyle],range:
+            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : paragraphStyle],range:
                 NSMakeRange(0,attributedStringStep.length))
             
             fullAttributedString.append(attributedStringStep)
