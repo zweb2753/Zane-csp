@@ -48,6 +48,15 @@ public class AlgorithmsViewController: UIViewController
     }
     
     private func createParagraphStyle() -> NSParagraphStyle
+    {
+        let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .left
+        paragraphStyle.defaultTabInterval = 15
+        paragraphStyle.firstLineHeadIdent = 20
+        paragraphStyle.headndent = 35
+        
+        return paragraphSyle
+    }
     
     override public func viewDidLoad()
     {
