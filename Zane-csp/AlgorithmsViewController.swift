@@ -14,6 +14,38 @@ public class AlgorithmsViewController: UIViewController
     @IBOutlet weak var algorithmText: UILabel!
     
     private func setupAlgorithm() -> Void
+    {
+        var algorithmSteps : [String] = []
+        
+        // TODO: Define algorithm and all steps
+        let algorithm :String = "These are the instructions \n"
+        let stepOne :String = "Create new project"
+        let stepTwo :String = "Create all classes"
+        let stepThree :String = "imports/variables"
+        let stepFour :String = "write the code"
+        let stepFive :Sring = "test the code"
+        
+        // TODO: Finish adding all steps to the algorithm
+        algorithmSteps = [stepOne, stepTwo, stepThree]
+        
+        let attributesDictionary = [NSAttributeedStringKey.fot : algrithmText.font]
+        let fullAttrbutedString = NSMutableAttributedString(string: algorithm, attributes: attributesDictionary)
+        
+        for step in algorithmSteps
+        {
+            let bullet :String = "heart"
+            let formattedStep :String = "\n\(bullet) \(step)"
+            let attributdStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let paragraphStyle = createParagraphStyle()
+            
+            attributedStringStep.addAttributes([NSAtributedStringKey.paragraphStyle : paragraphStyle],range:
+                NSMakeRange(0,attributedStringStep.length))
+            
+            fullAttributedString.append(attributedStringStep)
+        }
+        
+        algorithmText.attributedText = fullAttributedString
+    }
     
     private func createParagraphStyle() -> NSParagraphStyle
     
