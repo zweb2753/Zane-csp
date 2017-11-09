@@ -33,6 +33,7 @@ public class AlgorithmsViewController: UIViewController
         
         for step in algorithmSteps
         {
+            //creates bulleet points with the symbol
             let bullet :String = "heart"
             let formattedStep :String = "\n\(bullet) \(step)"
             let attributdStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
@@ -46,7 +47,7 @@ public class AlgorithmsViewController: UIViewController
         
         algorithmText.attributedText = fullAttributedString
     }
-    
+    // this function changes how the paragrah is formtte and set up.
     private func createParagraphStyle() -> NSParagraphStyle
     {
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
