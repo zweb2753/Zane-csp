@@ -28,7 +28,7 @@ public class AlgorithmsViewController: UIViewController
         // TODO: Finish adding all steps to the algorithm
         algorithmSteps = [stepOne, stepTwo, stepThree]
         
-        let attributesDictionary = [NSAttributeedStringKey.fot : algorithmText.font]
+        let attributedDictionary = [NSAttributedStringKey.fot : algorithmText.font]
         let fullAttrbutedString = NSMutableAttributedString(string: algorithm, attributes: attributesDictionary)
         
         for step in algorithmSteps
@@ -56,7 +56,7 @@ public class AlgorithmsViewController: UIViewController
         paragraphStyle.firstLineHeadIdent = 20
         paragraphStyle.headndent = 35
         
-        return paragraphSyle
+        return paragraphStyle;
     }
     
     override public func viewDidLoad()
@@ -66,7 +66,8 @@ public class AlgorithmsViewController: UIViewController
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

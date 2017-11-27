@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "binary code 1x-1.jpeg",
+      "filename" : "and gate.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "binary code 1x.jpeg",
+      "filename" : "and gatex2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "binary code 3x.jpg",
+      "filename" : "and gatex3.png",
       "scale" : "3x"
     }
   ],

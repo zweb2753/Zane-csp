@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCD49FE81FC32AE1005B78B6 /* Flameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD49FE71FC32AE1005B78B6 /* Flameable.swift */; };
+		DCD49FEA1FC32BC3005B78B6 /* FlameWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD49FE91FC32BC3005B78B6 /* FlameWorld.swift */; };
 		DCF0552C1FB3520D00A50D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF0552B1FB3520D00A50D52 /* AppDelegate.swift */; };
 		DCF0552E1FB3520D00A50D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF0552D1FB3520D00A50D52 /* ViewController.swift */; };
 		DCF055311FB3520D00A50D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF0552F1FB3520D00A50D52 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCD49FE71FC32AE1005B78B6 /* Flameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flameable.swift; sourceTree = "<group>"; };
+		DCD49FE91FC32BC3005B78B6 /* FlameWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlameWorld.swift; sourceTree = "<group>"; };
 		DCF055281FB3520D00A50D52 /* Zane-csp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zane-csp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF0552B1FB3520D00A50D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF0552D1FB3520D00A50D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DCD49FDE1FC329A2005B78B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCD49FE71FC32AE1005B78B6 /* Flameable.swift */,
+				DCD49FE91FC32BC3005B78B6 /* FlameWorld.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DCF0551F1FB3520D00A50D52 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +81,7 @@
 		DCF0552A1FB3520D00A50D52 /* Zane-csp */ = {
 			isa = PBXGroup;
 			children = (
+				DCD49FDE1FC329A2005B78B6 /* Model */,
 				DCF0552B1FB3520D00A50D52 /* AppDelegate.swift */,
 				DCF0552D1FB3520D00A50D52 /* ViewController.swift */,
 				DCF0552F1FB3520D00A50D52 /* Main.storyboard */,
@@ -158,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCF055441FB3534100A50D52 /* GloalImpactViewController.swift in Sources */,
+				DCD49FEA1FC32BC3005B78B6 /* FlameWorld.swift in Sources */,
 				DCF0554A1FB3538C00A50D52 /* DataViewController.swift in Sources */,
 				DCF055461FB3536200A50D52 /* AlgorithmsViewController.swift in Sources */,
 				DCF055421FB3532500A50D52 /* ProgrammingViewController.swift in Sources */,
@@ -165,6 +180,7 @@
 				DCF0552E1FB3520D00A50D52 /* ViewController.swift in Sources */,
 				DCF0552C1FB3520D00A50D52 /* AppDelegate.swift in Sources */,
 				DCF0553E1FB3529D00A50D52 /* CreativityViewController.swift in Sources */,
+				DCD49FE81FC32AE1005B78B6 /* Flameable.swift in Sources */,
 				DCF055401FB352B900A50D52 /* InternetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
