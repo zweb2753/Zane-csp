@@ -8,44 +8,105 @@
 
 import UIKit
 
-public class AbstractionViewController: UIViewController
+public class AbstractionViewController: UIViewController, UIPageViewControllerDataSource
 {
-    private (set) lazy var orderedAbstrationViews : [UIViewController] =
+    private (set) lazy var orderedAbstractionViews : [UIViewController] =
     {
         return [
             self.newAbstractionViewController(abstractionLevel : "Block"),
             self.newAbstractionViewController(abstractionLevel: "Java"),
-            self.newAbstractionViewController(atractionLevel: "ByteCode"),
+            self.newAbstractionViewController(abstractionLevel: "ByteCode"),
             self.newAbstractionViewController(abstractionLevel: "Binary"),
-            self.newAbstractionViewController(abstractionLeve: "AndGate"),
-        ]
+            self.newAbstractionViewController(abstractionLevel: "AndGate"),
+            ]
     }()
-        
+    
     //Helper method to retrieve the correct view controller
-    private func newAbstractionViewController(abstractionLevel : String) -> UIViController
-        
-        
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func newAbstractionViewController(abstractionLevel : String) -> UIViewController
+    {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewcController(withIdentifier: "\(abstractionLevel)ViewController")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override public func viewDidLoad()
+    {
+        super.viewDidLoad()
+        dataSource = self
+        
+        if let firstViewController = orderedAbstractionViews.first
+        {
+            setViewControllers([firstViewController],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        }
     }
-    */
-
+    
+    //mark:- required protocol methd for uipageviewcontroller data sorce
+    public func pageViewController(_ pageViewController: UIPageViewCotroller, viewControllerBefore
+        viewontroller: UIViewController) -> UIViewController?
+    {
+        guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
+            else
+        {
+            return nil
+        }
+        
+        let previousIndex = viewControllerIndex - 1
+        
+        guard previousIndex >= 0
+            else
+        {
+            return oreredAbstractionViews.last
+        }
+        
+        guard orderedAbstractionViews.count > previousIndex
+            else
+        {
+            return nil
+        }
+        
+        return orderedAbstractionViews[previousIndex]
+    }
+    
+    public func pageViewController(_pageViewController: UIPageViewController, viewControllerAfter
+        viewController: UIViewController) -> UIViewController?
+    {
+        guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
+            else
+        {
+            return nil
+        }
+        
+        let nextIndex = viewControllerIndex + 1
+        
+        guard nextIndex >= 0
+            else
+        {
+            return orderedAbstractionViews.first
+        }
+        
+        return orderedAbstrctionViews[nextIndex]
+    }
+    
+    public func presentationCount(for pageViewController:UIPageViewController) -> Int
+    {
+        return orredAbstractionViews.count
+    }
+    
+    public func presentationCount(for pageViewController: UIPageViewController) -> Int
+    {
+        return orderedAbstractioViews.count
+    }
+    
+    public func presentationIndex(for ageViewController: UIPageViewController) -> Int
+    {
+        guard let firstViewController= viewControllers?.first, let firstViewControllerIndex =
+            ordedAbstractionViews.index(of: firstViewController)
+            else
+        {
+            return 0
+        }
+        
+        return firstViewControllerIndex
+    }
 }
