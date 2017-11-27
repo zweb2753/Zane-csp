@@ -8,8 +8,24 @@
 
 import UIKit
 
-class AbstractionViewController: UIViewController {
-
+public class AbstractionViewController: UIViewController
+{
+    private (set) lazy var orderedAbstrationViews : [UIViewController] =
+    {
+        return [
+            self.newAbstractionViewController(abstractionLevel : "Block"),
+            self.newAbstractionViewController(abstractionLevel: "Java"),
+            self.newAbstractionViewController(atractionLevel: "ByteCode"),
+            self.newAbstractionViewController(abstractionLevel: "Binary"),
+            self.newAbstractionViewController(abstractionLeve: "AndGate"),
+        ]
+    }()
+        
+    //Helper method to retrieve the correct view controller
+    private func newAbstractionViewController(abstractionLevel : String) -> UIViController
+        
+        
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
