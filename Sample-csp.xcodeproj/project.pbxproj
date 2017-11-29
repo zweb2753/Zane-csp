@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC9521321FCF006100E33290 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9521311FCF006000E33290 /* InternetMasterViewController.swift */; };
+		DC9521351FCF0B3200E33290 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9521341FCF0B3200E33290 /* WebKit.framework */; };
 		DCD49FE81FC32AE1005B78B6 /* Flameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD49FE71FC32AE1005B78B6 /* Flameable.swift */; };
 		DCD49FEA1FC32BC3005B78B6 /* FlameWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD49FE91FC32BC3005B78B6 /* FlameWorld.swift */; };
 		DCF0552C1FB3520D00A50D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF0552B1FB3520D00A50D52 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		DC9521311FCF006000E33290 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
+		DC9521341FCF0B3200E33290 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DCD49FE71FC32AE1005B78B6 /* Flameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flameable.swift; sourceTree = "<group>"; };
 		DCD49FE91FC32BC3005B78B6 /* FlameWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlameWorld.swift; sourceTree = "<group>"; };
 		DCF055281FB3520D00A50D52 /* Zane-csp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zane-csp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,12 +51,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9521351FCF0B3200E33290 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC9521331FCF0B3200E33290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC9521341FCF0B3200E33290 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCD49FDE1FC329A2005B78B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +80,7 @@
 			children = (
 				DCF0552A1FB3520D00A50D52 /* Zane-csp */,
 				DCF055291FB3520D00A50D52 /* Products */,
+				DC9521331FCF0B3200E33290 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,8 +122,8 @@
 			buildConfigurationList = DCF0553A1FB3520D00A50D52 /* Build configuration list for PBXNativeTarget "Zane-csp" */;
 			buildPhases = (
 				DCF055241FB3520D00A50D52 /* Sources */,
-				DCF055251FB3520D00A50D52 /* Frameworks */,
 				DCF055261FB3520D00A50D52 /* Resources */,
+				DCF055251FB3520D00A50D52 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DCF055231FB3520D00A50D52 /* Build configuration list for PBXProject "Zane-csp" */;
+			buildConfigurationList = DCF055231FB3520D00A50D52 /* Build configuration list for PBXProject "Sample-csp" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -349,7 +361,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DCF055231FB3520D00A50D52 /* Build configuration list for PBXProject "Zane-csp" */ = {
+		DCF055231FB3520D00A50D52 /* Build configuration list for PBXProject "Sample-csp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCF055381FB3520D00A50D52 /* Debug */,

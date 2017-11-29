@@ -49,7 +49,8 @@ public class InternetMasterViewController : UITableViewController
     
     override public func tableView(_ tableView: UITable, cellForRowat indexPath: IndexPath) -> UITableView
     {
-        let cell = tableView.dequeueReusable
+        let cell = tableView.dequeueReusableCell(withIdentier:
+            "reuseIdentifier", for : index Path)
         let currentText = internetTopics[indexPath.row]
         cell.textLabel!.text = currentText
         
