@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import WebKit
 
-class InternetViewController: UIViewController {
+public class InternetDetailViewController: UIViewController
+{
+    
+}
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
+        setup()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setup() -> Void
+    {
+        
     }
     
 
