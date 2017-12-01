@@ -9,12 +9,18 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        if let splitViewOntroller = window!.rootViewController as? UISplitViewController{
+            let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count - 1] as! UINavigationController
+            
+            navigationController.topViewontroller!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+            splitViewController.delegate = self
+        }
         // Override point for customization after application launch.
         return true
     }
@@ -39,8 +45,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+    func splitViewController(_ splitViewController; UISplitViewControler,
+                            collapseSecondary secondaryViewController : UIViewController,
+                            onto primaryViewController: UIViewController) -> Bool
+    {
+        guard let secondarAsNavContoller = secondaryViewController as? UINavigatioController else { return false}
+        guard let topAsDetailContller = secondaryAsNavConroller.topViewController as? InternetDetilViewController else { return false  }
+        if topAsDetailController.detailAddress == nil
+        {
+            return true
+        }
+        return false
     }
-
-
 }
 
