@@ -170,6 +170,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CqD-E2-EBC" kind="show" id="hXg-RC-T9z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -362,4 +365,7 @@
         <image name="bytecode" width="254" height="198"/>
         <image name="javaSample" width="1126" height="754"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mG6-d2-m1u"/>
+    </inferredMetricsTieBreakers>
 </document>
