@@ -21,14 +21,30 @@ public class InternetMasterViewController : UITableViewController
             "Swift Guide"
         ]
     }()
+    private lazy var adresses : [String] = []
     
     private var detailViewontroller : InternetDetailViewController?
     
     private func setup() -> Void
     {
+        addresses = [
+            "https://www.google.com",
+            "https://www.google.com",
+            "https://www.google.com",
+            "https://www.google.com",
+            "https://www.google.com",
+            "https://www.google.com",
+            
+        ]
         
+    if let splitView = splitViewController
+    {
+        let currentControllers = splitView.viewControllers
+        detailVewController = currentControllers.first as? InternetDeailiewController
+        
+        }
     }
-        
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
