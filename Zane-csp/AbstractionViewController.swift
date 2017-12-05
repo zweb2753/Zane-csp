@@ -43,7 +43,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     
     //mark:- required protocol methd for uipageviewcontroller data sorce
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore
-        viewontroller: UIViewController) -> UIViewController?
+        viewController: UIViewController) -> UIViewController?
     {
         guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
             else
@@ -91,11 +91,6 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     public func presentationCount(for pageViewController:UIPageViewController) -> Int
     {
         return orderedAbstractionViews.count
-    }
-    
-    public func presentationCount(for pageViewController: UIPageViewController) -> Int
-    {
-        return orderedAbstractioViews.count
     }
     
     public func presentationIndex(for ageViewController: UIPageViewController) -> Int

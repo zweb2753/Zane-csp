@@ -53,7 +53,7 @@ public class InternetMasterViewController : UITableViewController
         
         // Do any additional setup after loading the view.
     }
-    override public func numberOfSections(in tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    public func numberOfSections(in tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 1
     }
@@ -96,8 +96,8 @@ public class InternetMasterViewController : UITableViewController
                 
                 controller.detailAddress = urlString
                 controller.detailText = pageText
-                controllerNavigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.vavgationItem
+                controller.NavigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.NavigationItem.
             }
         }
     }
