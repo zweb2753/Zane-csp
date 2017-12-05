@@ -7,7 +7,7 @@
 //
 
 import UIKit
-public class FlameWorld: 
-{
-    private var 
-}
+//public class FlameWorld:
+//{
+//    private var
+//}

@@ -28,8 +28,8 @@ public class AlgorithmsViewController: UIViewController
         // TODO: Finish adding all steps to the algorithm
         algorithmSteps = [stepOne, stepTwo, stepThree]
         
-        let attributedDictionary = [NSAttributedStringKey.fot : algorithmText.font]
-        let fullAttrbutedString = NSMutableAttributedString(string: algorithm, attributes: attributesDictionary)
+        let attributedDictionary = [NSAttributedStringKey.font : algorithmText.font]
+        let fullAttrbutedString = NSMutableAttributedString(string: algorithm, attributes: attributedDictionary)
         
         for step in algorithmSteps
         {

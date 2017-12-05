@@ -22,7 +22,7 @@ public class InternetDetailViewController: UIViewController
     var detailAddress : String?
     }
 
-    override public func viewDidLoad()
+    public func viewDidLoad()
     {
         super.viewDidLoad()
         configureDetailView()
@@ -34,10 +34,10 @@ public class InternetDetailViewController: UIViewController
     {
         if detailAddress != nil
         {
-            if let currentWebView = webViewr
+            if let currentWebView = webViewer
             {
                 let currentURL = URL(string: detailAddress!)
-                let currentWebRequest = URLRequest(url: currentURL!))
+                let currentWebRequest = URLRequest(url: currentURL!)
             }
         }
         else
@@ -45,7 +45,7 @@ public class InternetDetailViewController: UIViewController
             if let currentWebView = webViewer
             {
                 let currentURL = URL(string: "https://www.cnn.com")
-                urrentWebView.load(URLRequest(url:currentURL!))
+                currentWebView.load(URLRequest(url:currentURL!))
             }
         }
         if detailText != nil

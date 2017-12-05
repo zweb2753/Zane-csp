@@ -21,9 +21,9 @@ public class InternetMasterViewController : UITableViewController
             "Swift Guide"
         ]
     }()
-    private lazy var adresses : [String] = []
+    private lazy var addresses : [String] = []
     
-    private var detailViewontroller : InternetDetailViewController?
+    private var detailViewController : InternetDetailViewController?
     
     private func setup() -> Void
     {
@@ -40,16 +40,15 @@ public class InternetMasterViewController : UITableViewController
     if let splitView = splitViewController
     {
         let currentControllers = splitView.viewControllers
-        detailVewController = currentControllers.first as? InternetDeailiewController
+        detailViewController = currentControllers.first as? InternetDetailViewController
         
-        }
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         setup()
-        self.clearSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
     }

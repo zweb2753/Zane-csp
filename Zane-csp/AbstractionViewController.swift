@@ -24,7 +24,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     //Helper method to retrieve the correct view controller
     private func newAbstractionViewController(abstractionLevel : String) -> UIViewController
     {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewcController(withIdentifier: "\(abstractionLevel)ViewController")
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(abstractionLevel)ViewController")
     }
     
     override public func viewDidLoad()
@@ -42,7 +42,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     }
     
     //mark:- required protocol methd for uipageviewcontroller data sorce
-    public func pageViewController(_ pageViewController: UIPageViewCotroller, viewControllerBefore
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore
         viewontroller: UIViewController) -> UIViewController?
     {
         guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
@@ -56,7 +56,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
         guard previousIndex >= 0
             else
         {
-            return oreredAbstractionViews.last
+            return orderedAbstractionViews.last
         }
         
         guard orderedAbstractionViews.count > previousIndex
@@ -85,12 +85,12 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
             return orderedAbstractionViews.first
         }
         
-        return orderedAbstrctionViews[nextIndex]
+        return orderedAbstractionViews[nextIndex]
     }
     
     public func presentationCount(for pageViewController:UIPageViewController) -> Int
     {
-        return orredAbstractionViews.count
+        return orderedAbstractionViews.count
     }
     
     public func presentationCount(for pageViewController: UIPageViewController) -> Int
@@ -100,8 +100,8 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     
     public func presentationIndex(for ageViewController: UIPageViewController) -> Int
     {
-        guard let firstViewController= viewControllers?.first, let firstViewControllerIndex =
-            ordedAbstractionViews.index(of: firstViewController)
+        guard let firstViewController = viewControllers?.first, let firstViewControllerIndex =
+            orderedAbstractionViews.index(of: firstViewController)
             else
         {
             return 0

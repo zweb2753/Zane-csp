@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2178E51FD6EFE200B0A61C /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2178E41FD6EFE200B0A61C /* DrawingView.swift */; };
 		DC9521321FCF006100E33290 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9521311FCF006000E33290 /* InternetMasterViewController.swift */; };
 		DC9521351FCF0B3200E33290 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9521341FCF0B3200E33290 /* WebKit.framework */; };
 		DCD49FE81FC32AE1005B78B6 /* Flameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD49FE71FC32AE1005B78B6 /* Flameable.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC2178E41FD6EFE200B0A61C /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		DC9521311FCF006000E33290 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		DC9521341FCF0B3200E33290 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DCD49FE71FC32AE1005B78B6 /* Flameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flameable.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				DCD49FE71FC32AE1005B78B6 /* Flameable.swift */,
 				DCD49FE91FC32BC3005B78B6 /* FlameWorld.swift */,
+				DC2178E41FD6EFE200B0A61C /* DrawingView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				DCD49FEA1FC32BC3005B78B6 /* FlameWorld.swift in Sources */,
 				DCF0554A1FB3538C00A50D52 /* DataViewController.swift in Sources */,
 				DCF055461FB3536200A50D52 /* AlgorithmsViewController.swift in Sources */,
+				DC2178E51FD6EFE200B0A61C /* DrawingView.swift in Sources */,
 				DCF055421FB3532500A50D52 /* ProgrammingViewController.swift in Sources */,
 				DCF055481FB3537D00A50D52 /* AbstractionViewController.swift in Sources */,
 				DCF0552E1FB3520D00A50D52 /* ViewController.swift in Sources */,
