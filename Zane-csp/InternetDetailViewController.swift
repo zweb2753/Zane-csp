@@ -15,14 +15,19 @@ public class InternetDetailViewController: UIViewController
     {
         didSet
         {
-            configureDetaiView()
+            configureDetailView()
         }
     }
     
-    var detailAddress : String?
+    var detailText : String?
+    {
+        didSet
+        {
+            configureDetailView()
+        }
     }
 
-    public func viewDidLoad()
+    override public func viewDidLoad()
     {
         super.viewDidLoad()
         configureDetailView()

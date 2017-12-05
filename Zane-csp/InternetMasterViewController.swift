@@ -37,26 +37,27 @@ public class InternetMasterViewController : UITableViewController
             
         ]
         
-    if let splitView = splitViewController
-    {
-        let currentControllers = splitView.viewControllers
-        detailViewController = currentControllers.first as? InternetDetailViewController
-        
+        if let splitView = splitViewController
+        {
+            let currentControllers = splitView.viewControllers
+            detailViewController = currentControllers.first as? InternetDetailViewController
+            
+        }
     }
     
-    override func viewDidLoad()
+    override public func viewDidLoad()
     {
         super.viewDidLoad()
         setup()
         self.clearsSelectionOnViewWillAppear = false
-
+        
         // Do any additional setup after loading the view.
     }
-    override public func numberOfSectons(in tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override public func numberOfSections(in tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 1
     }
-
+    
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return internetTopics.count
@@ -65,7 +66,7 @@ public class InternetMasterViewController : UITableViewController
     override public func tableView(_ tableView: UITable, cellForRowat indexPath: IndexPath) -> UITableView
     {
         let cell = tableView.dequeueReusableCell(withIdentier:
-            "reuseIdentifier", for : index Path)
+            "reuseIdentifier", for : indexPath)
         let currentText = internetTopics[indexPath.row]
         cell.textLabel!.text = currentText
         
@@ -74,7 +75,7 @@ public class InternetMasterViewController : UITableViewController
     
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.idetnifier! == "showDetail"
+        if segue.identifier! == "showDetail"
         {
             if let indexPath = self.tableView.indexPathForSelectedRow
             {
@@ -91,7 +92,7 @@ public class InternetMasterViewController : UITableViewController
                 }
                 
                 let controller = segue.destination as!
-                    InternetDetailViewController
+                InternetDetailViewController
                 
                 controller.detailAddress = urlString
                 controller.detailText = pageText
@@ -101,15 +102,7 @@ public class InternetMasterViewController : UITableViewController
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+  
+    
 }
