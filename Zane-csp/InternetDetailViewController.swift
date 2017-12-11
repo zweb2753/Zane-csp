@@ -11,6 +11,8 @@ import WebKit
 
 public class InternetDetailViewController: UIViewController
 {
+    @IBOutlet weak var webViewer : WKWebView!
+    @IBOutlet weak var textView : UILabel!
     var detailAddress : String?
     {
         didSet
@@ -35,6 +37,12 @@ public class InternetDetailViewController: UIViewController
         // Do any additional setup after loading the view.
     }
 
+    
+    private func setup() -> Void
+    {
+        
+    }
+    
     private func configureDetailView() -> Void
     {
         if detailAddress != nil
@@ -43,6 +51,7 @@ public class InternetDetailViewController: UIViewController
             {
                 let currentURL = URL(string: detailAddress!)
                 let currentWebRequest = URLRequest(url: currentURL!)
+                currentWebView.load(currentWebRequest)
             }
         }
         else
@@ -67,20 +76,8 @@ public class InternetDetailViewController: UIViewController
                 currentText.text = detailText
             }
         }
-    private func setup() -> Void
-    {
-        
-    }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
     }
-    */
-
 }

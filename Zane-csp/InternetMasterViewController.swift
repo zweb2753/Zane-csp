@@ -63,9 +63,9 @@ public class InternetMasterViewController : UITableViewController
         return internetTopics.count
     }
     
-    override public func tableView(_ tableView: UITable, cellForRowat indexPath: IndexPath) -> UITableView
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentier:
+        let cell = tableView.dequeueReusableCell(withIdentifier:
             "reuseIdentifier", for : indexPath)
         let currentText = internetTopics[indexPath.row]
         cell.textLabel!.text = currentText
@@ -91,13 +91,12 @@ public class InternetMasterViewController : UITableViewController
                     pageText = internetTopics[indexPath.row]
                 }
                 
-                let controller = segue.destination as!
-                InternetDetailViewController
+                let controller = segue.destination as! InternetDetailViewController
                 
                 controller.detailAddress = urlString
                 controller.detailText = pageText
-                controller.NavigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.NavigationItem.
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }

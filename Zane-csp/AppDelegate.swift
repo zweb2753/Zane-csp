@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        if let splitViewOntroller = window!.rootViewController as? UISplitViewController{
+        if let splitViewController = window!.rootViewController as? UISplitViewController{
             let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count - 1] as! UINavigationController
             
-            navigationController.topViewontroller!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+            navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
             splitViewController.delegate = self
         }
         // Override point for customization after application launch.
@@ -50,8 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                                  collapseSecondary secondaryViewController : UIViewController,
                                  onto primaryViewController: UIViewController) -> Bool
         {
-            guard let secondarAsNavContoller = secondaryViewController as? UINavigatioController else { return false}
-            guard let topAsDetailContller = secondaryAsNavConroller.topViewController as? InternetDetilViewController else { return false  }
+            guard let secondaryAsNavContoller = secondaryViewController as? UINavigationController else { return false}
+            guard let topAsDetailController = secondaryAsNavContoller.topViewController as? InternetDetailViewController else { return false  }
             if topAsDetailController.detailAddress == nil
             {
                 return true

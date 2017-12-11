@@ -28,8 +28,14 @@ public class DrawingView: UIView
                            startAngle: CGFloat(0),
                            endAngle: CGFloat(2) * CGFloat.pi,
                            clockwise: true)
-        stickFigure.move(to: CGPoint(x: 200, y: 228))
-        stickFigure.addLine(to: CGPoint(x: 200, y: 200))
+        stickFigure.move(to: CGPoint(x: 200, y: 220))
+        stickFigure.addLine(to: CGPoint(x: 200, y: 270))
+        stickFigure.move(to: CGPoint(x: 180, y: 240))
+        stickFigure.addLine(to: CGPoint(x: 220, y: 240))
+        stickFigure.move(to: CGPoint(x: 200, y: 270))
+        stickFigure.addLine(to: CGPoint(x: 180, y: 300))
+        stickFigure.move(to: CGPoint(x: 200, y: 270))
+        stickFigure.addLine(to: CGPoint(x: 220, y: 300))
         return stickFigure
     }
     

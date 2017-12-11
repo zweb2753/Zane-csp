@@ -22,21 +22,21 @@ public class AlgorithmsViewController: UIViewController
         let stepOne :String = "Create new project"
         let stepTwo :String = "Create all classes"
         let stepThree :String = "imports/variables"
-        let stepFour :String = "write the code"
-        let stepFive :String = "test the code"
+        //let stepFour :String = "write the code"
+        //let stepFive :String = "test the code"
         
         // TODO: Finish adding all steps to the algorithm
         algorithmSteps = [stepOne, stepTwo, stepThree]
         
         let attributedDictionary = [NSAttributedStringKey.font : algorithmText.font]
-        let fullAttrbutedString = NSMutableAttributedString(string: algorithm, attributes: attributedDictionary)
+        let fullAttributedString = NSMutableAttributedString(string: algorithm, attributes: attributedDictionary)
         
         for step in algorithmSteps
         {
             //creates bulleet points with the symbol
             let bullet :String = "heart"
             let formattedStep :String = "\n\(bullet) \(step)"
-            let attributdStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
             let paragraphStyle = createParagraphStyle()
             
             attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : paragraphStyle],range:
@@ -53,8 +53,8 @@ public class AlgorithmsViewController: UIViewController
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .left
         paragraphStyle.defaultTabInterval = 15
-        paragraphStyle.firstLineHeadIdent = 20
-        paragraphStyle.headndent = 35
+        paragraphStyle.firstLineHeadIndent = 20
+        paragraphStyle.headIndent = 35
         
         return paragraphStyle;
     }
@@ -66,12 +66,7 @@ public class AlgorithmsViewController: UIViewController
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+  
 
     /*
     // MARK: - Navigation

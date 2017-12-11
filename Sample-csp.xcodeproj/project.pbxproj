@@ -16,7 +16,6 @@
 		DCF0552E1FB3520D00A50D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF0552D1FB3520D00A50D52 /* ViewController.swift */; };
 		DCF055311FB3520D00A50D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF0552F1FB3520D00A50D52 /* Main.storyboard */; };
 		DCF055331FB3520D00A50D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF055321FB3520D00A50D52 /* Assets.xcassets */; };
-		DCF055361FB3520D00A50D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF055341FB3520D00A50D52 /* LaunchScreen.storyboard */; };
 		DCF0553E1FB3529D00A50D52 /* CreativityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF0553D1FB3529D00A50D52 /* CreativityViewController.swift */; };
 		DCF055401FB352B900A50D52 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF0553F1FB352B900A50D52 /* InternetDetailViewController.swift */; };
 		DCF055421FB3532500A50D52 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF055411FB3532500A50D52 /* ProgrammingViewController.swift */; };
@@ -37,7 +36,6 @@
 		DCF0552D1FB3520D00A50D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DCF055301FB3520D00A50D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCF055321FB3520D00A50D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DCF055351FB3520D00A50D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCF055371FB3520D00A50D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF0553D1FB3529D00A50D52 /* CreativityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityViewController.swift; sourceTree = "<group>"; };
 		DCF0553F1FB352B900A50D52 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
@@ -103,11 +101,10 @@
 				DCF0552D1FB3520D00A50D52 /* ViewController.swift */,
 				DCF0552F1FB3520D00A50D52 /* Main.storyboard */,
 				DC9521311FCF006000E33290 /* InternetMasterViewController.swift */,
+				DCF0553F1FB352B900A50D52 /* InternetDetailViewController.swift */,
 				DCF055321FB3520D00A50D52 /* Assets.xcassets */,
-				DCF055341FB3520D00A50D52 /* LaunchScreen.storyboard */,
 				DCF055371FB3520D00A50D52 /* Info.plist */,
 				DCF0553D1FB3529D00A50D52 /* CreativityViewController.swift */,
-				DCF0553F1FB352B900A50D52 /* InternetDetailViewController.swift */,
 				DCF055411FB3532500A50D52 /* ProgrammingViewController.swift */,
 				DCF055431FB3534100A50D52 /* GloalImpactViewController.swift */,
 				DCF055451FB3536200A50D52 /* AlgorithmsViewController.swift */,
@@ -176,7 +173,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCF055361FB3520D00A50D52 /* LaunchScreen.storyboard in Resources */,
 				DCF055331FB3520D00A50D52 /* Assets.xcassets in Resources */,
 				DCF055311FB3520D00A50D52 /* Main.storyboard in Resources */,
 			);
@@ -214,14 +210,6 @@
 				DCF055301FB3520D00A50D52 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DCF055341FB3520D00A50D52 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCF055351FB3520D00A50D52 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
