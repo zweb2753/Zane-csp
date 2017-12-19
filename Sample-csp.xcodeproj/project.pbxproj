@@ -18,7 +18,10 @@
 		DC0FD67B1FE1778F0042878F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FD6761FE1778F0042878F /* Player.swift */; };
 		DC0FD67C1FE1778F0042878F /* Invader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FD6771FE1778F0042878F /* Invader.swift */; };
 		DC0FD67D1FE1778F0042878F /* InvaderLaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FD6781FE1778F0042878F /* InvaderLaser.swift */; };
+		DC214F611FE4251E00FB2EBF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC214F601FE4251E00FB2EBF /* GameScene.swift */; };
 		DC2178E51FD6EFE200B0A61C /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2178E41FD6EFE200B0A61C /* DrawingView.swift */; };
+		DC3640C31FE9689E00BE91FC /* DeathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3640C21FE9689E00BE91FC /* DeathScene.swift */; };
+		DC3640C51FE96BC700BE91FC /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3640C41FE96BC700BE91FC /* StartScene.swift */; };
 		DC9521321FCF006100E33290 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9521311FCF006000E33290 /* InternetMasterViewController.swift */; };
 		DC9521351FCF0B3200E33290 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9521341FCF0B3200E33290 /* WebKit.framework */; };
 		DCD49FE81FC32AE1005B78B6 /* Flameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD49FE71FC32AE1005B78B6 /* Flameable.swift */; };
@@ -57,7 +60,10 @@
 		DC0FD68C1FE188280042878F /* invader sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "invader sound.mp3"; path = "../../../../../Downloads/GameCode/Sounds/invader sound.mp3"; sourceTree = "<group>"; };
 		DC0FD68D1FE188280042878F /* extra sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "extra sound.mp3"; path = "../../../../../Downloads/GameCode/Sounds/extra sound.mp3"; sourceTree = "<group>"; };
 		DC0FD68E1FE188280042878F /* laser sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "laser sound.mp3"; path = "../../../../../Downloads/GameCode/Sounds/laser sound.mp3"; sourceTree = "<group>"; };
+		DC214F601FE4251E00FB2EBF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		DC2178E41FD6EFE200B0A61C /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		DC3640C21FE9689E00BE91FC /* DeathScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
+		DC3640C41FE96BC700BE91FC /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		DC9521311FCF006000E33290 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		DC9521341FCF0B3200E33290 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DCD49FE71FC32AE1005B78B6 /* Flameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flameable.swift; sourceTree = "<group>"; };
@@ -152,6 +158,9 @@
 				DCD49FE91FC32BC3005B78B6 /* FlameWorld.swift */,
 				DC2178E41FD6EFE200B0A61C /* DrawingView.swift */,
 				DCF0552F1FB3520D00A50D52 /* Main.storyboard */,
+				DC214F601FE4251E00FB2EBF /* GameScene.swift */,
+				DC3640C21FE9689E00BE91FC /* DeathScene.swift */,
+				DC3640C41FE96BC700BE91FC /* StartScene.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,11 +284,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCF055441FB3534100A50D52 /* GloalImpactViewController.swift in Sources */,
+				DC3640C51FE96BC700BE91FC /* StartScene.swift in Sources */,
+				DC214F611FE4251E00FB2EBF /* GameScene.swift in Sources */,
 				DC0FD67D1FE1778F0042878F /* InvaderLaser.swift in Sources */,
 				DC0FD67C1FE1778F0042878F /* Invader.swift in Sources */,
 				DC9521321FCF006100E33290 /* InternetMasterViewController.swift in Sources */,
 				DCD49FEA1FC32BC3005B78B6 /* FlameWorld.swift in Sources */,
 				DCF0554A1FB3538C00A50D52 /* DataViewController.swift in Sources */,
+				DC3640C31FE9689E00BE91FC /* DeathScene.swift in Sources */,
 				DC0FD67B1FE1778F0042878F /* Player.swift in Sources */,
 				DC0FD6791FE1778F0042878F /* Projectile.swift in Sources */,
 				DCF055461FB3536200A50D52 /* AlgorithmsViewController.swift in Sources */,
@@ -421,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 98LJQN23KF;
 				INFOPLIST_FILE = "Zane-csp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CTEC.Zane-csp";
@@ -435,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 98LJQN23KF;
 				INFOPLIST_FILE = "Zane-csp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CTEC.Zane-csp";
